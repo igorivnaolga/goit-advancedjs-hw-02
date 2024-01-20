@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                      */const e=document.querySelector("[data-start]"),t=document.querySelector("[data-stop]"),n=document.querySelector("body");function o(){return`#${Math.floor(Math.random()*16777215).toString(16).padStart(6,0)}`}t.disabled=!0;const d=l=>{const r=setInterval(()=>{n.style.backgroundColor=o(),t.disabled=!1,e.disabled=!0;const a=s=>{clearInterval(r),t.disabled=!0,e.disabled=!1};t.addEventListener("click",a)},1e3)};e.addEventListener("click",d);
+//# sourceMappingURL=commonHelpers.js.map
