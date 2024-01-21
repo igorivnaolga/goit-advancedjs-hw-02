@@ -26,18 +26,19 @@ function handlerSubmit(event) {
         });
       });
   }
+  form.reset();
 }
 
-function createPromise(positionData, delayData) {
+function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(delay => {
       const shouldResolve = Math.random() > 0.3;
       if (shouldResolve) {
-        resolve({ position: positionData, delay: delayData });
+        resolve({ position, delay });
       } else {
-        reject({ position: positionData, delay: delayData });
+        reject({ position, delay });
       }
-    }, delayData);
+    }, delay);
   });
 }
 
